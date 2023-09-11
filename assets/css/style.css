@@ -16,11 +16,11 @@
 
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body{
     font-family: 'Roboto', sans-serif;
-    overflow-x: hidden;
 }
 
 .menu{
@@ -29,22 +29,23 @@ body{
     background-color: var(--white);
     border: 0.5px solid var(--black);
 }
+.menu-content{
+    padding: 0 70px;
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .logo{
     margin-left: 10px;
 }
 
-.menu-content{
-    width: 100vw;
-    height: 50px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
 
 .list-menu{
     display: flex;
-    width: 50%;
+    width: 60%;
     justify-content: space-around;
     font-weight: 900;
     font-size: 20px;
@@ -80,142 +81,122 @@ body{
 }
 
 .main-bg{
+    display: flex;
+    flex-direction: column;
     width: 100vw;
     height: 100vh;
-    background-size: cover;
+    padding: 80px 60px 20px 60px;
     background-image: url(../img/bg2.svg);
-    overflow-x: hidden;
+    background-size: cover;
 }
 
 .white-bg{
+    display: flex;
+    flex-direction: column;
     width: 100vw;
     height: 100vh;
-    overflow-x: hidden;
+    padding: 80px;
 }
 
-.main-content{
-    max-width: 120rem;
-    margin: 0 auto;
-    padding: 10rem var(--gap);
-}
-
-
-
-.content-driver-calc{
-    display: flex;
-    width: 85%;
-    margin: 0 auto;
-}
-
-.form-driver-calc{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    margin: 180px 0 0 0;
-    background-color: var(--white);
-    padding: 10px;
-    margin-left: 20px;
-}
-
-.caixas{
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.linha{
-    display: flex;
-}
-
-.linha2{
-    display: flex;
-    flex-direction: column;
-}
-
-.dia-seg-check{
+.title{
     display: flex;
     align-items: center;
-    margin: 0 auto;
-    font-weight: 700;
-    font-size: 18px;
+    font-size: 50px;
+    width: 40%;
+    background-color: var(--crimson);
+    margin-bottom: 20px;
+    height: 60px;
 }
 
-.dia-seg{
-    min-width: 25px;
-    min-height: 25px;
-    margin-right: 10px;
+.driver-calc-content{
+    display: flex;
+    padding: 0 30px;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
 }
 
-.form-input{
-    background-color: var(--primary-color);
-    height: 40px;
+.btn-como-usar{
     width: 180px;
-    margin-bottom: 10px;
-    color: var(--white);
-    font-size: 25px;
-    
-}
-
-.form-label{
-    display: block;
-}
-
-.btn{
-    display: block;
-    margin-top: 20px;
-    height: 40px;
-    width: 180px;
-    font-size: 25px;
-    font-weight: 700;
-    border-radius: 30px;
-    cursor: pointer;
+    border-radius:30%;
+    background-color: var(--crimson);
     color: var(--black);
-    background-color: var(--white);
+    font-size: 30px;
+    margin:10px auto;
+    height: 70px;
+    cursor: pointer;
 }
 
-.btn:hover{
+.btn-como-usar:hover{
     background-color: var(--black);
     color: var(--white);
 }
 
+
+.calc{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 0;
+    width: 45%;
+    height: 100%;
+    background-color:var(--black);
+}
+
+.result{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 0;
+    width: 45%;
+    height: 100%;
+    background-color:var(--black);
+
+}
+
 .disabled{
-    cursor: no-drop;
+    cursor: not-allowed;
 }
 
-.como-usar{
-    background-color: var(--white);
-    width: 280px;
-    height: 60px;
+.inputs{
+    display: flex;
+    flex-direction: column;
+    margin: 0 50px;
+}
+
+label{
+    color: var(--white);
+    font-size: 20px;
+}
+
+input{
+    width: 100%;
+    height: 40px;
+}
+
+.time{
+    width: 165.818px;
+}
+
+.btn{
+    width: 30%;
+    margin-top: 20px;
+    
+}
+
+button{
+    height: 40px;
     border-radius: 30px;
-    margin-left: 900px;
-    margin-top: 40px;
-    text-align: center;
     cursor: pointer;
-    color: var(--crimson);
-    font-size: 50px;
+    font-size: 30px;
+    background-color: var(--white);
+    border: none;
 }
 
-.como-usar:hover{
-    background-color:var(--crimson);
+button:hover{
+    background-color: var(--crimson);
     color: var(--white);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -244,3 +225,103 @@ body{
     color: var(--crimson);
 }
 
+@media (max-width: 1030px){
+    .main-bg{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 200vh;
+        padding: 80px 60px 20px 60px;
+        background-image: url(../img/bg2.svg);
+        background-size: cover;
+    }
+
+    .driver-calc-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 30px;
+        justify-content: space-evenly;
+        
+    }
+
+    .calc{
+        justify-content: center;
+        margin-bottom: 50px;
+        width: 80%;
+    }
+    
+    .result{
+        justify-content: center;
+        padding: 10px 0;
+        width: 80%;
+    
+    }
+}
+
+@media (max-width: 780px){
+    .title{
+        font-size: 2em;
+        height: 70px;
+    }
+
+    .driver-calc-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 30px;
+        justify-content: space-evenly;
+        
+    }
+
+    .calc{
+        justify-content: center;
+        margin-bottom: 50px;
+        width: 100%;
+    }
+    
+    .result{
+        justify-content: center;
+        padding: 10px 0;
+        width: 100%;
+    
+    }
+
+    .btn{
+        width: 50%;  
+    }
+}
+
+@media (max-width: 450px){
+    .title{
+        font-size: 2em;
+        height: 70px;
+        width: 90px;
+    }
+
+    .driver-calc-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 30px;
+        justify-content: space-evenly;
+        
+    }
+
+    .calc{
+        justify-content: center;
+        margin-bottom: 50px;
+        width: 95vw;
+    }
+    
+    .result{
+        justify-content: center;
+        padding: 10px 0;
+        width: 95vw;
+    
+    }
+
+    .btn{
+        width: 50%;  
+    }
+}

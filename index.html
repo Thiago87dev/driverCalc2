@@ -16,98 +16,92 @@
                 <li><a href="#diver-calc">Driver calc.</a></li>
                 <li><a href="#km-por-litro">Km por litro</a></li>
                 <li><a href="#desc-combustivel">Desc. combustivel</a></li>
-                <li><a href="#como-usar">Como usar</a></li>
+                <li><a href="#section-como-usar">Como usar</a></li>
                 <li><a href="#quem-somos">Quem somos</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="diver-calc" class="diver-calc main-bg">
-        <div class="content-driver-calc">
-            <form class="form-driver-calc">
-
-                <div class="caixas">
-                    <div class="lado1">
-                        <label class="form-label" for="preco-comb">Preço do combustivel</label>
-                        <input id="preco-comb" class="form-input" type="number">
-
-                        <label class="form-label" for="desc-comb">Desconto do comb. em %</label>
-                        <input id="desc-comb" class="form-input" type="number">
-
-                        <label class="form-label" for="qnt-km-litro">Quantos km por litro</label>
-                        <input id="qnt-km-litro" class="form-input" type="number">
-
-                        <label class="form-label" for="qnt-km-rodado">Quantidade km rodado</label>
-                        <input id="qnt-km-rodado" class="form-input" type="number">
+    <section id="diver-calc" class="main-bg">
+        <h1 class="title">Driver Calc</h1>
+        <div class="driver-calc-content">
+            <div class="calc">
+                    <div class="inputs">
+                        <label for="preco-comb">Preço combustivel</label>
+                        <input id="preco-comb" type="number">
+                    </div>
+                    <div class="inputs">
+                        <label for="desc-comb">Desc. combustivel</label>
+                        <input id="desc-comb" type="number">
                     </div>
 
-                    <div class="lado2">
-                        <label class="form-label" for="hora-inicio">Iniciou a rodar</label>
-                        <input id="hora-inicio" class="form-input" type="time">
-
-                        <label class="form-label" for="hora-final">Parou de rodar</label>
-                        <input id="hora-final" class="form-input" type="time">
-
-                        <label class="form-label" for="faturamento">Faturamento</label>
-                        <input id="faturamento" class="form-input" type="number">
-
-                        <button class="btn">Calcular</button>
+                    <div class="inputs">
+                        <label for="km-por-l">Km por litro</label>
+                        <input id="km-por-l" type="number">
                     </div>
+                    <div class="inputs">
+                        <label for="km-rodado">Km rodado</label>
+                        <input id="km-rodado" type="number">
+                    </div>
+                
+                    <div class="inputs time">
+                        <label for="hora-inicio">Hora inicio</label>
+                        <input id="hora-inicio" type="time">
+                    </div>
+                    <div class="inputs time">
+                        <label for="hora-final">Hora final</label>
+                        <input id="hora-final" type="time">
+                    </div>
+
+                    <div class="inputs">
+                        <label for="faturamento">Faturamento</label>
+                        <input id="faturamento" type="number">
+                    </div>
+                    <div class="inputs btn">
+                        <button>Calcular</button>
+                    </div>
+                
+            </div>
+
+            <div class="result">
+                <div class="inputs">
+                    <label for="ganho-hora">ganho por km </label>
+                    <input class="disabled" disabled id="ganho-hora" type="number">
                 </div>
-                <div class="dia-seg-check">
-                    <input type="checkbox" class="dia-seg" id="dia-seg">
-                    <label class="dia-seg-label" for="dia-seg">Marque se voce parou no dia seguinte</label>
+                <div class="inputs">
+                    <label for="gasto-km">Gasto por km</label>
+                    <input class="disabled" disabled id="gasto-km" type="number">
                 </div>
-            </form>
 
-            <form class="form-driver-calc">
-
-                <div class="caixas">
-                    <div class="lado1">
-                        <label class="form-label">Preço do comb. com desconto</label>
-                        <input disabled id="preco-comb " class="form-input disabled" type="text">
-
-                        <label class="form-label" >Gasto a cada KM rodado</label>
-                        <input disabled id="desc-comb " class="form-input disabled" type="text">
-
-                        <label class="form-label" >Lucro a cada KM rodado</label>
-                        <input disabled id="qnt-km-litro " class="form-input disabled" type="text">
-
-                        <label class="form-label">Gasto com combustivel</label>
-                        <input disabled id="qnt-km-rodado " class="form-input disabled" type="text">
-                    </div>
-
-                    <div class="lado2">
-                        <label class="form-label">Horas trabalhada</label>
-                        <input disabled id="hora-inicio " class="form-input disabled" type="text">
-
-                        <label class="form-label">Ganho por hora</label>
-                        <input disabled id="hora-final " class="form-input disabled" type="text">
-
-                        <label class="form-label">Lucro</label>
-                        <input disabled id="faturamento " class="form-input disabled" type="text">
-
-                    </div>
+                <div class="inputs">
+                    <label for="gasto-combustivel">Gasto com comb.</label>
+                    <input class="disabled" disabled id="gasto-combustivel" type="number">
                 </div>
-            </form>
+                <div class="inputs">
+                    <label for="horas-trab">Horas trabalhada</label>
+                    <input class="disabled" disabled id="horas-trab" type="number">
+                </div>
+            
+                <div class="inputs">
+                    <label for="ganho-por-hora">Ganho por hora</label>
+                    <input class="disabled" disabled id="ganho-por-hora" type="number">
+                </div>
+                <div class="inputs">
+                    <label for="preco-comb-com-desc">$ Comb. c/ desc.</label>
+                    <input class="disabled" disabled id="preco-comb-com-desc" type="number">
+                </div>
+
+                <div class="inputs ">
+                    <label for="lucro">Lucro</label>
+                    <input class="disabled" disabled id="lucro" type="number">
+                </div>
+            </div>
         </div>
-
-        <h1 class="como-usar">Como usar</h1>
-
-    </section>
-
-    <section id="km-por-litro" class="km-por-litro white-bg">
+        <button class="btn-como-usar">Como usar</button>
 
     </section>
-    <section id="desc-combustivel" class="desc-combustivel main-bg">
-
-    </section>
-
-    <section id="como-usar" class="como-usar white-bg">
-
-    </section>
-
-    <section id="quem-somos" class="quem-somos main-bg">
+    <section id="km-por-litro" class="white-bg">
+        <h1>Titulo</h1>
 
     </section>
 

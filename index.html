@@ -10,9 +10,10 @@
 
 <body>
     <header class="menu">
-        <nav class="menu-content">
-            <h1 class="logo">LOGO</h1>
-            <ul class="list-menu">
+        <h1 class="logo">LOGO</h1>
+        <nav data-js="menu-content" class="menu-content">
+            <button data-js="btn-mobile" class="btn-mobile">Menu</button>
+            <ul data-js="list-menu" class="list-menu">
                 <li><a href="#diver-calc">Driver calc.</a></li>
                 <li><a href="#km-por-litro">Km por litro</a></li>
                 <li><a href="#desc-combustivel">Desc. combustivel</a></li>
@@ -58,7 +59,7 @@
                         <input id="faturamento" type="number">
                     </div>
                     <div class="inputs btn">
-                        <button>Calcular</button>
+                        <button class="btn-calcular">Calcular</button>
                     </div>
                 
             </div>
@@ -110,6 +111,7 @@
                 Alves</a></p>
     </footer>
 
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

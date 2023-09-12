@@ -6,6 +6,7 @@
     --transparent-yellow: #ffff026b;
     --primary-color:#2f4f4f;
     --crimson:#dc143c;
+    --crimson-tranparent:#dc143c52;
 }
 
 *{
@@ -25,17 +26,13 @@ body{
 
 .menu{
     position: fixed;
-    display: flex; 
-    background-color: var(--white);
-    border: 0.5px solid var(--black);
-}
-.menu-content{
-    padding: 0 70px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-around;
     width: 100vw;
     height: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: var(--white);
+    border: 0.5px solid var(--black);
 }
 
 .logo{
@@ -45,8 +42,6 @@ body{
 
 .list-menu{
     display: flex;
-    width: 60%;
-    justify-content: space-around;
     font-weight: 900;
     font-size: 20px;
 }
@@ -59,13 +54,14 @@ body{
 
 .list-menu a {
     text-decoration: none;
-    color: var(--primary-color);
+    color: var(--black);
     position: relative;
+    padding: 0.5rem;
 }
 
 .menu ul li a::before{
     content: '';
-    background-color: var(--transparent-yellow);
+    background-color: var(--crimson-tranparent);
     display: block;
     position: absolute;
     inset: 0;
@@ -78,6 +74,10 @@ body{
 .menu ul li a:hover::before{
     transform: scaleX(1);
     transform-origin: left;
+}
+
+.btn-mobile{
+    display: none;
 }
 
 .main-bg{
@@ -117,18 +117,18 @@ body{
 }
 
 .btn-como-usar{
+    height: 40px;
     width: 180px;
-    border-radius:30%;
-    background-color: var(--crimson);
-    color: var(--black);
-    font-size: 30px;
-    margin:10px auto;
-    height: 70px;
+    border-radius: 30px;
     cursor: pointer;
+    font-size: 30px;
+    background-color: var(--white);
+    border: none;
+    margin: 15px auto;
 }
 
 .btn-como-usar:hover{
-    background-color: var(--black);
+    background-color: var(--crimson);
     color: var(--white);
 }
 
@@ -184,7 +184,7 @@ input{
     
 }
 
-button{
+.btn-calcular{
     height: 40px;
     border-radius: 30px;
     cursor: pointer;
@@ -193,7 +193,7 @@ button{
     border: none;
 }
 
-button:hover{
+.btn-calcular:hover{
     background-color: var(--crimson);
     color: var(--white);
 }
@@ -226,6 +226,44 @@ button:hover{
 }
 
 @media (max-width: 1030px){
+    .btn-mobile{
+        display: block;
+        background-color: var(--black);
+        color: var(--white);
+        border-radius: 30%;
+        border: none;
+        width: 50px;
+        height: 30px;
+        font-weight: 700;
+    }
+
+    .btn-mobile:active{
+        background-color: var(--crimson);
+        color: var(--black);
+    }
+
+    .list-menu{
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 50px;
+        right: 0;
+        background-color: #e7e7e7;
+        height: 0px;
+        z-index: 2;
+    }
+
+    nav.active .list-menu{
+        display: block;
+        height: calc(100vh - 50px);
+    }
+
+    .list-menu li{
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    }
+
     .main-bg{
         display: flex;
         flex-direction: column;

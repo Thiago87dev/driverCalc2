@@ -108,7 +108,7 @@ body{
     height: 60px;
 }
 
-.driver-calc-content{
+.content{
     display: flex;
     padding: 0 30px;
     justify-content: space-around;
@@ -198,10 +198,65 @@ input{
     color: var(--white);
 }
 
+.btn-como-usar2{
+    height: 40px;
+    width: 180px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 30px;
+    background-color: var(--black);
+    border: none;
+    margin: 15px auto;
+    color: var(--white);
+}
 
+.btn-como-usar2:hover{
+    background-color: var(--crimson);
+    color: var(--white);
+}
 
+.km-litro-calc{
+    border: #000 2px solid;
+    width: 45%;
+}
 
+.calc-km-litro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: red 2px solid;
+    width: 100%;
+    height: 50%; 
+}
 
+.label2{
+    color: var(--black);
+    font-size: 20px;
+}
+
+.input2{
+    width: 80%;
+    height: 40px;
+    background-color: var(--primary-color);
+}
+
+.inputs2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    
+}
+
+.img{
+    width: 50%;
+}
+
+.gas-station{
+    width: 500px;
+    margin-left: 100px;
+}
 
 
 
@@ -301,6 +356,9 @@ input{
     .title{
         font-size: 2em;
         height: 70px;
+        margin: 20px auto;
+        justify-content: center;
+        width: 350px;
     }
 
     .driver-calc-content{
@@ -334,7 +392,7 @@ input{
     .title{
         font-size: 2em;
         height: 70px;
-        width: 90px;
+        width: 280px;
     }
 
     .driver-calc-content{

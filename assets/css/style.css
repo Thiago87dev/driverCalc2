@@ -253,6 +253,21 @@ input{
     margin-left: 100px;
 }
 
+.btn-calcular2{
+    height: 40px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 30px;
+    background-color: var(--black);
+    border: none;
+    color: var(--white);
+}
+
+.btn-calcular2:hover{
+    background-color: var(--crimson);
+    color: var(--white);
+}
+
 
 
 .footer{
@@ -428,13 +443,12 @@ input{
         justify-content: space-around;
         width: 100%;
         height: 90%;
-        
-
+    
     }
 
     .km-litro-calc{
         height: 500px;
-        width: 80%;
+        width: 120%;
         margin-bottom: 5px;
     }
 
@@ -479,18 +493,25 @@ input{
     }
 
     .calc-km-litro{
-        height: 200px;
+        height: 300px;
     }
+
+    .white-bg{
+        height: 190vh;  
+    }
+    
 
     .btn{
         width: 50%;  
     }
 
     .km-litro-calc{
-        height: 300px;
-        width: 130%;
+        height: 400px;
+        width: 150%;
         margin-bottom: 5px;
     }
-
-
+    .btn-calcular2{
+        width: 140%;
+        font-size: 20px;
+    }
 }

@@ -108,7 +108,7 @@ body{
     height: 60px;
 }
 
-.content{
+.driver-calc-content{
     display: flex;
     padding: 0 30px;
     justify-content: space-around;
@@ -198,25 +198,18 @@ input{
     color: var(--white);
 }
 
-.btn-como-usar2{
-    height: 40px;
-    width: 180px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 30px;
-    background-color: var(--black);
-    border: none;
-    margin: 15px auto;
-    color: var(--white);
-}
+/* ######################################### */
 
-.btn-como-usar2:hover{
-    background-color: var(--crimson);
-    color: var(--white);
+.km-litro-content{
+    display: flex;
+    padding: 0 30px;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+
 }
 
 .km-litro-calc{
-    border: #000 2px solid;
     width: 45%;
 }
 
@@ -281,6 +274,15 @@ input{
 }
 
 @media (max-width: 1030px){
+
+    .title{
+        font-size: 3em;
+        height: 70px;
+        margin: 20px auto;
+        justify-content: center;
+        width: 350px;
+    }
+
     .btn-mobile{
         display: block;
         background-color: var(--black);
@@ -305,7 +307,7 @@ input{
         right: 0;
         background-color: #e7e7e7;
         height: 0px;
-        z-index: 2;
+        z-index: 1000;
     }
 
     nav.active .list-menu{
@@ -327,6 +329,14 @@ input{
         padding: 80px 60px 20px 60px;
         background-image: url(../img/bg2.svg);
         background-size: cover;
+    }
+    .white-bg{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 200vh;
+        padding: 80px 60px 20px 60px;
+        
     }
 
     .driver-calc-content{
@@ -350,6 +360,32 @@ input{
         width: 80%;
     
     }
+
+    .km-por-litro{
+        height: 200vh;
+    }
+
+    .km-litro-content{
+        flex-direction: column;
+        align-items: center;
+        height: 1000px;
+    }
+
+    .km-litro-calc{
+        height: 500px;
+        width: 80%;
+        margin-bottom: 40px;
+    }
+
+   .img{
+    width: 800px;
+    display: flex;
+   }
+
+   .gas-station{
+    width: 500px;
+    margin: 0 auto;
+   }
 }
 
 @media (max-width: 780px){
@@ -357,7 +393,6 @@ input{
         font-size: 2em;
         height: 70px;
         margin: 20px auto;
-        justify-content: center;
         width: 350px;
     }
 
@@ -386,6 +421,27 @@ input{
     .btn{
         width: 50%;  
     }
+
+    .km-litro-content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .km-litro-calc{
+        height: 500px;
+        width: 80%;
+        margin-bottom: 40px;
+    }
+
+   .img{
+    width: 800px;
+    display: flex;
+   }
+
+   .gas-station{
+    width: 300px;
+    margin:0 auto;
+   }
 }
 
 @media (max-width: 450px){
@@ -417,7 +473,17 @@ input{
     
     }
 
+    .calc-km-litro{
+        height: 200px;
+    }
+
     .btn{
         width: 50%;  
+    }
+
+    .km-litro-calc{
+        height: 600px;
+        width: 130%;
+        margin-bottom: 40px;
     }
 }

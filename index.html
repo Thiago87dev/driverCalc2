@@ -23,7 +23,7 @@
         </nav>
     </header>
 
-    <section id="diver-calc" class="main-bg">
+    <section id="diver-calc" class="white-bg">
         <h1 class="title">Driver Calc</h1>
         <div class="driver-calc-content">
             <div class="calc">
@@ -101,7 +101,7 @@
         <button class="btn-como-usar">Como usar</button>
 
     </section>
-    <section id="km-por-litro" class="white-bg">
+    <section id="km-por-litro" class="main-bg">
         <h1 class="title">Km por litro</h1>
         <div class="km-litro-content">
             <div class="km-litro-calc">
@@ -111,7 +111,7 @@
                         <input class="input2" id="qnt-km-rod" type="number">
                     </div>
                     <div class="inputs2">
-                        <label class="label2" for="qnt-litro-abast">quantidade de litros abastecido</label>
+                        <label class="label2" for="qnt-litro-abast">Quantidade de litros abastecido</label>
                         <input class="input2" id="qnt-litro-abast" type="number">
                     </div>
                     <div class="inputs btn2">
@@ -127,6 +127,36 @@
             </div>
             <div class="img">
                 <img class="gas-station" src="assets/img/pngegg.png">
+            </div>
+        </div>
+    </section>
+
+    <section id="desc-combustivel" class="white-bg2">
+        <h1 class="title">desconto comb.</h1>
+        <div class="desc-comb-content">
+            <div class="km-litro-calc">
+                <div class="calc-km-litro">
+                    <div class="inputs2">
+                        <label class="label2" for="pago-sem-desc">Valor pago sem desconto</label>
+                        <input class="input2" id="pago-sem-desc" type="number">
+                    </div>
+                    <div class="inputs2">
+                        <label class="label2" for="pago-com-desc">Valor pago com desconto</label>
+                        <input class="input2" id="pago-com-desc" type="number">
+                    </div>
+                    <div class="inputs btn2">
+                        <button class="btn-calcular2">Calcular</button>
+                    </div>
+                </div>
+                <div class="calc-km-litro">
+                    <div class="inputs2">
+                        <label class="label2" for="valor-desc">Valor do desconto (em %)</label>
+                        <input disabled class="input2 disabled" id="valor-desc" type="number">
+                    </div>
+                </div>
+            </div>
+            <div class="img">
+                <img class="gas-station" src="assets/img/porcentagem.png">
             </div>
         </div>
     </section>

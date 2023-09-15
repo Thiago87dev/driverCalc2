@@ -86,10 +86,9 @@ body{
     display: flex;
     flex-direction: column;
     width: 100vw;
-    height: 110vh;
+    height: 100vh;
     padding: 80px 60px 20px 60px;
-    background-image: url(../img/bg2.svg);
-    background-size: cover;
+    background-color: #708090;
 }
 
 .white-bg{
@@ -97,7 +96,16 @@ body{
     flex-direction: column;
     width: 100vw;
     height: 100vh;
-    padding: 80px;
+    padding: 80px 60px 20px 60px;
+   
+}
+
+.white-bg2{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    padding: 80px 60px 20px 60px; 
 }
 
 .title{
@@ -115,7 +123,7 @@ body{
     padding: 0 30px;
     justify-content: space-around;
     width: 100%;
-    height: 100%;
+    height: 80%;
 }
 
 .btn-como-usar{
@@ -124,13 +132,14 @@ body{
     border-radius: 30px;
     cursor: pointer;
     font-size: 30px;
-    background-color: var(--white);
+    background-color: var(--crimson);
     border: none;
-    margin: 15px auto;
+    margin: 10px auto;
+    color: var(--white);
 }
 
 .btn-como-usar:hover{
-    background-color: var(--crimson);
+    background-color: var(--black);
     color: var(--white);
 }
 
@@ -173,7 +182,7 @@ label{
 
 input{
     width: 100%;
-    height: 40px;
+    height: 30px;
     font-size: 20px;
     font-weight: 700;
 }
@@ -271,10 +280,22 @@ input{
     color: var(--white);
 }
 
+/* #################### secção 3 ##################### */
+
+
+.desc-comb-content{
+    display: flex;
+    padding: 0 30px;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+}
+
 /* #################### rodape ##################### */
 
 
 .footer{
+    margin-top: 50px;
     text-align: center;
     font-size: 1.6rem;
     height: 100%;
@@ -346,12 +367,14 @@ input{
         display: flex;
         flex-direction: column;
         width: 100vw;
-        height: 200vh;
+        height: 100vh;
         padding: 80px 60px 20px 60px;
-        background-image: url(../img/bg2.svg);
-        background-size: cover;
     }
     .white-bg{
+        height: 140vh;  
+    }
+
+    .white-bg2{
         height: 140vh;  
     }
 
@@ -403,6 +426,12 @@ input{
     margin: 0 auto;
 
    }
+
+   .desc-comb-content{
+    flex-direction: column;
+    align-items: center;
+    height: 1000px;
+}
 }
 
 @media (max-width: 780px){
@@ -437,17 +466,6 @@ input{
 
     .btn{
         width: 50%;  
-    }
-
-
-    .km-litro-content{
-        flex-direction: column;
-        align-items: center;
-        padding: 0 30px;
-        justify-content: space-around;
-        width: 100%;
-        height: 90%;
-    
     }
 
     .km-litro-calc{
@@ -503,10 +521,24 @@ input{
     .white-bg{
         height: 190vh;  
     }
+
+    .white-bg2{
+        height: 110vh;  
+    }
     
 
     .btn{
         width: 50%;  
+    }
+
+    .km-litro-content{
+        flex-direction: column;
+        align-items: center;
+        padding: 0 30px;
+        justify-content: space-around;
+        width: 100%;
+        height: 100%;
+    
     }
 
     .km-litro-calc{
@@ -517,5 +549,15 @@ input{
     .btn-calcular2{
         width: 140%;
         font-size: 20px;
+    }
+
+    .desc-comb-content{
+        flex-direction: column;
+        align-items: center;
+        padding: 0 30px;
+        justify-content: space-around;
+        width: 100%;
+        height: 100%;
+    
     }
 }

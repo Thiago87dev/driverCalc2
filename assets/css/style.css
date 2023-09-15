@@ -263,6 +263,10 @@ input{
     width: 500px;
     margin-left: 100px;
 }
+.img-porcentagem{
+    width: 450px;
+    margin-left: 100px;
+}
 
 .btn-calcular2{
     height: 40px;
@@ -288,7 +292,7 @@ input{
     padding: 0 30px;
     justify-content: space-around;
     width: 100%;
-    height: 100%;
+    height: 85%;
 }
 
 /* #################### rodape ##################### */
@@ -480,6 +484,10 @@ input{
    }
 
    .gas-station{
+    width: 300px;
+    margin:0 auto;
+   }
+   .img-porcentagem{
     width: 300px;
     margin:0 auto;
    }

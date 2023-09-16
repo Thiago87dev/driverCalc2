@@ -531,7 +531,11 @@ input{
     }
 
     .white-bg2{
-        height: 110vh;  
+        height: 130vh;  
+    }
+
+    .main-bg{
+        height: 120vh;
     }
     
 
@@ -568,4 +572,6 @@ input{
         height: 100%;
     
     }
+
+    
 }

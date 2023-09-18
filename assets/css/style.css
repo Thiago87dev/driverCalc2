@@ -170,6 +170,14 @@ body{
     color: var(--crimson);
 }
 
+.verde{
+    color: green;
+}
+
+.black{
+    color: black;
+}
+
 .inputs{
     display: flex;
     flex-direction: column;

@@ -64,13 +64,37 @@ function driverCalc(){
         let lucro = subtrair(faturamento, gastoComComb)
         let ganhoPorKm = dividir(lucro, kmRodado)
 
+        
+        //trabalhando com as horas 
+        //transformando o horario de inicio(string) em valor decimal
+        let minutosTrabInicio = (Number(horaInicio.split(':')[0]) * 60) + Number(horaInicio.split(':')[1]) // total de horas e minutos em minutos
+        let horasTrabalhadasDecimalInicio = minutosTrabInicio / 60 //não chamei a função dividir pois nao quero arredondar os decimais
+        
+        //transformando o horario de fim(string) em valor decimal
+        let minutosTrabFim = (Number(horaFinal.split(':')[0]) * 60) + Number(horaFinal.split(':')[1]) // total de horas e minutos em minutos
+        let horasTrabalhadasDecimalFim = minutosTrabFim / 60 //não chamei a função dividir pois nao quero arredondar os decimais
+
+        // verificando se ele começou em um dia e finalizou em outro dia
+        let qntHoraTrabDecimal
+        if(horasTrabalhadasDecimalInicio > horasTrabalhadasDecimalFim){
+            qntHoraTrabDecimal = (24 - horasTrabalhadasDecimalInicio) + horasTrabalhadasDecimalFim
+        }else{
+            qntHoraTrabDecimal = horasTrabalhadasDecimalFim - horasTrabalhadasDecimalInicio // não chamei a função subtrair pois nao quero arredondar os decimais
+        }
+
+        let ganhoPorHora = dividir(lucro, qntHoraTrabDecimal)
+        
+        // convertendo a qnt de hora trabalhada decimal em qnt de hora trabalhada em string, ja formatada
+        let horas = Math.floor(qntHoraTrabDecimal)
+        let minutos = Math.floor((qntHoraTrabDecimal - horas) * 60)
+        let horaFormatada = `${horas.toString().padStart(2, '0')}:${minutos.toString().padStart(2, '0')}`
+
         ganhoPorKmInput.value = `R$${ganhoPorKm}`  
         gastoPorHoraInput.value = `R$${gastoPorKmRodado}` 
         gastoComCombInput.value = `R$${gastoComComb}`
-        horasTrabInput.value = 0
-        ganhoPorHoraInput.value = 0
+        horasTrabInput.value = horaFormatada
+        ganhoPorHoraInput.value = `R$${ganhoPorHora}`
         valorCombComDescInput.value = `R$${combComDesc}`
         lucroInput.value = `R$${lucro}`
-        
     }
 }

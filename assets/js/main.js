@@ -109,6 +109,33 @@ function kmLitroCalc(){
     const qntLitroAbast = Number(document.querySelector('[data-js="qnt-litro-abast"]').value)
     const resultKmLitro = document.querySelector('[data-js="result-km-litro"]')
 
-    const resultadoKmLitro = (qntKmRodado / qntLitroAbast).toFixed(2)
-    resultKmLitro.value = `${resultadoKmLitro} km por litro` 
+    if(qntKmRodado === 0){
+        alert('Quantidade km rodado deve ser preenchido')
+    } else if(qntLitroAbast === 0){
+        alert('Quantidade de litros abastecido deve ser preenchido')
+    }else{
+        const resultadoKmLitro = (qntKmRodado / qntLitroAbast).toFixed(2)
+        resultKmLitro.value = `${resultadoKmLitro} km por litro` 
+    }
 }
+
+// Calculo desconto combustivel
+const btnDescComb = document.querySelector('[data-js="btn-desc-comb"]')
+
+btnDescComb.addEventListener('click', descCombCalc)
+
+function descCombCalc(){
+    const semDesc = Number(document.querySelector('[data-js="pago-sem-desc"]').value)
+    const comDesc = Number(document.querySelector('[data-js="pago-com-desc"]').value)
+    const resultDescCombInput = document.querySelector('[data-js="result-desc-comb"]')
+
+    if(semDesc === 0 ){
+        alert('Valor pago sem desconto deve ser preenchido')
+    }else if(comDesc === 0 ){
+        alert('Valor pago com desconto deve ser preenchido')
+    } else{
+        const resultDescComb = ((semDesc - comDesc) * 100 / semDesc).toFixed(2)
+        resultDescCombInput.value = `${resultDescComb}%`
+    }
+
+}   

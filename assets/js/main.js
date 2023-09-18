@@ -96,5 +96,19 @@ function driverCalc(){
         ganhoPorHoraInput.value = `R$${ganhoPorHora}`
         valorCombComDescInput.value = `R$${combComDesc}`
         lucroInput.value = `R$${lucro}`
+
     }
+}
+// Calculo km por litro
+const btnKmLitro = document.querySelector('[data-js="btn-km-por-litro"]')
+
+btnKmLitro.addEventListener('click', kmLitroCalc)
+
+function kmLitroCalc(){
+    const qntKmRodado = Number(document.querySelector('[data-js="qnt-km-rod"]').value)
+    const qntLitroAbast = Number(document.querySelector('[data-js="qnt-litro-abast"]').value)
+    const resultKmLitro = document.querySelector('[data-js="result-km-litro"]')
+
+    const resultadoKmLitro = (qntKmRodado / qntLitroAbast).toFixed(2)
+    resultKmLitro.value = `${resultadoKmLitro} km por litro` 
 }

@@ -39,6 +39,10 @@ body{
     margin-left: 10px;
 }
 
+.logo img{
+    width: 50px;
+}
+
 
 .list-menu{
     display: flex;

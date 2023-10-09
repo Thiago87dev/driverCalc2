@@ -338,6 +338,10 @@ input{
     color: var(--crimson);
 }
 
+.logo{
+    width: 50px;
+}
+
 @media (max-width: 1030px){
 
     .title{
